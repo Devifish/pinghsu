@@ -95,7 +95,7 @@ $this->need('header.php');
 							<p><?php $this->excerpt(150, '...');?></p>
 						</div>
 						<div class="item-readmore">
-							<a href="<?php $this->permalink(); ?>"> Continue Reading → </a>
+							<a href="<?php $this->permalink(); ?>"> 继续阅读 → </a>
 						</div>
 					</div>
 				</div>

@@ -10,7 +10,7 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于 <?php $this->date('M j Y'); ?></time>  分类: <?php $this->category(''); ?>  评论: <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -29,7 +29,7 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于 <?php $this->date('M j Y'); ?></time>  分类: <?php $this->category(''); ?>  评论: <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -46,7 +46,7 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于 <?php $this->date('M j Y'); ?></time>  分类: <?php $this->category(''); ?>  评论: <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -62,7 +62,7 @@
 			<?php $this->title() ?>
 		</h1>
 		<div class="post-data">
-			<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+		<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于 <?php $this->date('M j Y'); ?></time>  分类: <?php $this->category(''); ?>  评论: <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 		</div>
 	</div>
 	<div id="post-content" class="post-content" itemprop="articleBody">
@@ -79,11 +79,11 @@
 <div id="post-bottom-bar" class="post-bottom-bar">
 	<div class="bottom-bar-inner">
 		<div class="bottom-bar-items social-share left">
-			<span class="bottom-bar-item">Share : </span>
+			<span class="bottom-bar-item">分享到 : </span>
 			<span class="bottom-bar-item bottom-bar-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($this->permalink()); ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">facebook</a></span>
 			<span class="bottom-bar-item bottom-bar-twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo urlencode($this->permalink()); ?>&text=<?php echo urlencode($this->title()); ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">Twitter</a></span>
-			<span class="bottom-bar-item bottom-bar-weibo"><a href="http://service.weibo.com/share/share.php?url=<?php echo urlencode($this->permalink()); ?>&amp;title=<?php echo urlencode($this->title()); ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">Weibo</a></span>
-			<span class="bottom-bar-item bottom-bar-qrcode"><a href="//pan.baidu.com/share/qrcode?w=300&amp;h=300&amp;url=<?php echo urlencode($this->permalink()); ?>" target="_blank" rel="nofollow">QRcode</a></span>
+			<span class="bottom-bar-item bottom-bar-weibo"><a href="http://service.weibo.com/share/share.php?url=<?php echo urlencode($this->permalink()); ?>&amp;title=<?php echo urlencode($this->title()); ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">微博</a></span>
+			<span class="bottom-bar-item bottom-bar-qrcode"><a href="//pan.baidu.com/share/qrcode?w=300&amp;h=300&amp;url=<?php echo urlencode($this->permalink()); ?>" target="_blank" rel="nofollow">二维码</a></span>
 		</div>
 		<div class="bottom-bar-items right">
 			<span class="bottom-bar-item"><?php theNext($this); ?></span>

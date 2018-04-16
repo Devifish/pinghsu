@@ -71,7 +71,7 @@ $comments->alt(' comment-odd', ' comment-even');
     <div id="comments" class="clearfix">
         <?php $this->comments()->to($comments); ?>
         <?php if($this->allow('comment')): ?>
-        <span class="response">Responses<?php if($this->user->hasLogin()): ?> / You are <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a> here, do you want to <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>logout</a> ?<?php endif; ?> <?php $comments->cancelReply(' / Cancel Reply'); ?></span>
+        <span class="response">评论<?php if($this->user->hasLogin()): ?> / 当前用户: <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a>, 你是否需要 <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>注销</a> ?<?php endif; ?> <?php $comments->cancelReply(' / Cancel Reply'); ?></span>
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form" onsubmit ="getElementById('misubmit').disabled=true;return true;">
             <?php if(!$this->user->hasLogin()): ?>
             <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix" placeholder="Name (*)" value="" required>
@@ -79,14 +79,14 @@ $comments->alt(' comment-odd', ' comment-even');
             <input type="url" name="url" id="url" class="form-control input-control clearfix" placeholder="Site (http://)" value="" <?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?>>
             <?php endif; ?>
 
-            <textarea name="text" id="textarea" class="form-control" placeholder="Your comment here. Be cool. " required ><?php $this->remember('text',false); ?></textarea>
+            <textarea name="text" id="textarea" class="form-control" placeholder="请在这里发表你的评论。" required ><?php $this->remember('text',false); ?></textarea>
 
-            <button type="submit" class="submit" id="misubmit">SUBMIT</button>
+            <button type="submit" class="submit" id="misubmit">发布</button>
             <?php $security = $this->widget('Widget_Security'); ?>
             <input type="hidden" name="_" value="<?php echo $security->getToken($this->request->getReferer())?>">
         </form>
         <?php else : ?>
-            <span class="response">Comments are closed.</span>
+            <span class="response">很抱歉，评论功能已经被关闭</span>
         <?php endif; ?>
 
         <?php if ($comments->have()): ?>

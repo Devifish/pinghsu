@@ -130,8 +130,8 @@
                 </header>
                 <section>
                     <div class="title404">
-                        <p>I have no secret of success but hard work.</p>
-                    </div><a href="<?php $this->options->siteUrl(); ?>" class="index404">Back Home</a>
+                        <p>这个Ye面或许被吃掉了，重新找过个吧。</p>
+                    </div><a href="<?php $this->options->siteUrl(); ?>" class="index404">返回主页</a>
                 </section>
             </div>
         </div>
